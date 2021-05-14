@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #444;
+    height: 100vh;
+}
+.title{
+    background-color: green;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 5vh;
+    color: white;
+
+}
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    background-color: green;
+}
+
+.menu-bar-item{
+    background-color: green;
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar-item.selected{
+    background-color: white;
+    color: green;
+}
+
+.menu-bar-item:hover{
+    background-color: rgb(3, 98, 3);
+    cursor: pointer;
+}
+.menu-bar-item.selected:hover{
+    background-color: white;
+    cursor: default;
+}
+
+.menu-icon-bar{
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    align-items: center;
+}
+
+.menu-icon{
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu-icon:hover{
+    background-color: lightgrey;
+}
+
+.menu-selector{
+    height: 4.5vh;
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+#font-family{
+    width: 10vw;
+    min-width: 130px;
+    font-family: Noto Sans;
+}
+
+#font-size{
+    width: 3.5vw;
+    min-width: 55px;
+}
+
+.formula-bar{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+#selected-cell{
+    width: 10vw;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    padding-left: 00.5rem;
+    padding-right: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+}
+
+#formula-sign{
+    width: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    background-color: lightgrey;
+
+}
+
+#formula-input{
+    width: 85vw;
+    height: 70%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.data-container {
+    display: flex;
+    height: 76vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    /* overflow: scroll; */
+}
+
+#select-all {
+    width: 25px;
+    height: 25px;
+    border: 1px solid lightgray;
+}
+
+#columns {
+    height: 25px;
+    width: calc(100vw - 25px);
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#rows {
+    width: 25px;
+    height: calc(76vh - 25px);
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+#cells {
+    position: relative;
+    width: calc(100vw - 25px);
+    height: calc(76vh - 25px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+
+.column-name {
+    min-width: 100px;
+    width: 100px;
+    border-right: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.row-name{
+    min-width: 25px;
+    min-height: 25px;
+    height: 25px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.cell-row{
+    display: flex;
+}
+.input-cell{
+    min-width: 100px;
+    width: 100px;
+    min-height: 25px;
+    height: 25px;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: Noto Sans;
+    overflow: hidden;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    outline-color: green;
+
+}
+
+.input-cell.selected{
+    border: 2px solid green;
+}
+
+.input-cell.top-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-selected {
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.left-selected {
+    border-left: none;
+}
+
+.input-cell.right-selected {
+    border-right: 1px solid lightgray;
+}
+
+.menu-icon.selected{
+    background-color: lightgray;
+}
+
+.input-cell:hover{
+    cursor: cell;
+}
